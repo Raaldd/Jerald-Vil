@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Personal Portfolio</title>
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #343a40;
+            padding: 15px 0;
+            z-index: 999;
+        }
+
+        .logo {
+            font-size: 35px;
+            font-style: italic;
+            color: olive;
+            margin-left: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            background-image: url('assets/img/pic.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            text-align: center;
+        }
+
+        #hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        #hero .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+        #hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: 80px;
+            color: aquamarine;
+        }
+
+        .hero-subtitle {
+            font-size: 22px;
+        }
+
+        /* About Section */
+        #about {
+            padding: 80px 0;
+            background-color: #222;
+        }
+
+        #about .box-shadow-full {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            color: #333;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #about img {
+            width: 100%;
+            border-radius: 10px;
+            max-width: 300px;
+        }
+
+        #about .info {
+            margin-left: 20px;
+            flex: 1;
+        }
+
+        #about .info p {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        /* Skills Section */
+        #work {
+            padding: 80px 0;
+            background-color: #000;
+        }
+
+        .skill-mf {
+            padding-top: 20px;
+        }
+
+        .skill-mf p {
+            color: white;
+        }
+
+        .progress {
+            height: 10px;
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .progress-bar {
+            background-color: #28a745;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        .progress span {
+            color: #fff;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 80px 0;
+            background-color: #222;
+        }
+
+        .contact-mf {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            color: #333;
+        }
+
+        .contact-mf .title-center {
+            text-align: center;
+        }
+
+        .contact-mf .more-info p {
+            font-size: 16px;
+        }
+
+        ul.list-ico {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.list-ico li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        ul.list-ico li span {
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        .socials ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .socials ul li {
+            margin: 0 15px;
+        }
+
+        .socials ul li a {
+            color: white;
+            font-size: 25px;
+        }
+
+        .socials ul li a:hover {
+            color: aquamarine;
+        }
+
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            #hero h1 {
+                font-size: 40px;
+            }
+
+            .hero-title {
+                font-size: 60px;
+            }
+
+            #about .box-shadow-full {
+                padding: 15px;
+            }
+
+            .info {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">My Personal Portfolio</div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div id="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">HI! I am Jerald R. Villar</h1>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="box-shadow-full">
+                <div>
+                    <img src="assets/img/profile.jpg" alt="Profile Picture">
+                </div>
+                <div class="info">
+                    <p><strong>Name:</strong> Jerald R. Villar</p>
+                    <p><strong>Profile:</strong> IT Student</p>
+                    <p><strong>Email:</strong> villarjerald01@gmail.com</p>
+                    <p><strong>Phone:</strong> (+63) 995-854-4349</p>
+                    <p><strong>About Me:</strong> I'm Jerald R. Villar, an IT student of Siargao Island Institute of Technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="work">
+        <div class="container">
+            <div class="skill-mf">
+                <p>Skills</p>
+                <div>
+                    <span>HTML</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 40%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <span>CSS</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 13%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <span>JavaScript</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 5%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-mf">
+                <div class="title-center">
+                    <h5>Contact</h5>
+                </div>
+                <div class="more-info">
+                    <p>If you have any questions, feel free to reach out via email, phone, or visit my social media below!</p>
+                    <ul class="list-ico">
+                        <li><span class="bi bi-geo-alt"></span> Brgy. Union, Dapa, Surigao del Norte</li>
+                        <li><span class="bi bi-phone"></span> (+63) 995-854-4349</li>
+                        <li><span class="bi bi-envelope"></span> villarjerald01@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="socials">
+                    <ul>
+                        <li><a href="https://www.facebook.com/jerald.villar.79"><span class="ico-circle">Facebook</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
